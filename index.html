@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#1b2140">
+  <title>Health Careers Explorer</title>
+  <meta name="description" content="A kid-friendly guide to health careers: what they do, how to get there, and what you can do now.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  <a class="skip" href="#careers">Skip to careers</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="Health Careers Explorer, back to top">
+        <span class="logo" aria-hidden="true"><span class="l1">H</span><span class="l2">e</span><span class="l3">a</span><span class="l4">l</span><span class="l5">t</span><span class="l1">h</span></span>
+        <span class="brand-text">Careers Explorer</span>
+      </a>
+      <nav aria-label="Career menu"><ul id="career-nav" class="pills"></ul></nav>
+      <div class="partner">
+        <img id="pcom-logo" src="assets/pcom-logo.jpg" alt="PCOM logo" height="56">
+        <span id="partner-fallback" hidden>PCOM logo<br>coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="welcome" aria-labelledby="hero-title">
+      <span class="float f1" aria-hidden="true">🩺</span>
+      <span class="float f2" aria-hidden="true">💊</span>
+      <span class="float f3" aria-hidden="true">🔬</span>
+      <span class="float f4" aria-hidden="true">🍎</span>
+      <div class="hero-copy">
+        <p class="eyebrow">For K-12 explorers</p>
+        <h2 id="hero-title">Meet the heroes of health care!</h2>
+        <p class="lead">Find out what they do all day, how long school takes, and what you can try right now.</p>
+        <a class="btn btn-big" href="#careers">Start exploring</a>
+        <ul class="stats" id="stats"></ul>
+      </div>
+    </section>
+
+    <section id="careers" class="panel reveal">
+      <h2>Pick a career to start exploring!</h2>
+      <div id="tile-grid" class="tile-grid"></div>
+      <noscript><p class="notice">Please turn on JavaScript to see the career pages.</p></noscript>
+    </section>
+
+    <div id="modules"></div>
+
+    <section id="fun" class="panel reveal">
+      <h2>Fun Zone</h2>
+      <div class="fun-grid">
+        <article class="card">
+          <h3>Poll: Which career sounds coolest?</h3>
+          <form id="poll-form"></form>
+          <div id="poll-results" aria-live="polite"></div>
+          <p class="small">Votes are saved only in this browser on this device.</p>
+        </article>
+
+        <article class="card">
+          <h3>Ask the author a question</h3>
+          <form id="question-form">
+            <label for="q-topic">Topic</label>
+            <select id="q-topic"></select>
+            <label for="q-text">Your question</label>
+            <textarea id="q-text" maxlength="500" rows="4" required></textarea>
+            <p class="small">Do not include your name, school, address, or phone number. Kids under 13: ask a grown-up to send it.</p>
+            <button class="btn" type="submit">Write my email</button>
+            <p id="q-status" class="small" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Get opportunity updates</h3>
+          <p>Parents, teachers, and students 13+ can email us to hear about camps, clubs, and programs. This site does not collect your email.</p>
+          <button class="btn" id="join-btn" type="button">Email us to join</button>
+        </article>
+
+        <article class="card">
+          <h3>Practice a little more</h3>
+          <p>Older students can look for a daily MCAT practice question from a trusted source. A mentor-approved link will go here.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Draft content. Not yet reviewed by PCOM mentors or staff.</p>
+    <p>PCOM / Office of Campus and Community Partnerships acknowledgment: pending approval of branding guidelines.</p>
+    <p>This site gives general education only, not medical advice.</p>
+    <p>Contact: <span id="contact-text"></span></p>
+  </footer>
+</body>
+</html>
